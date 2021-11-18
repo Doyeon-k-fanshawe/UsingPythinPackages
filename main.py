@@ -1,4 +1,13 @@
-from rich import print
+import jmespath
+
+expression = jmespath.compile('foo.bar')
+expression.search({'foo': {'bar': 'baz'}})
+'baz'
+expression.search({'foo': {'bar': 'other'}})
+'other'
+
+
+from Rich import print
 
 print("Hello, [bold magenta]World[/bold magenta]!", ":vampire:", locals())
 
