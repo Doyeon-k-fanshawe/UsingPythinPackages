@@ -1,3 +1,11 @@
+import ujson
+
+ujson.dumps([{"key": "value"}, 81, True])
+'[{"key":"value"},81,true]'
+ujson.loads("""[{"key": "value"}, 81, true]""")
+[{'key': 'value'}, 81, True]
+
+
 import requests
 r = requests.get('https://api.github.com/user', auth=('user', 'pass'))
 r.status_code
@@ -36,4 +44,3 @@ from emoji import emojize
 
 moj = emojize('Packages are :fire:')
 print(moj)
-
