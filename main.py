@@ -1,4 +1,5 @@
-from emoji import emojize
+#imports always go at the top
+from PIL import Image
 
-moj = emojize('Packages are :fire:')
-print(moj)
+background = Image.open("bg.jpg")
+background.show()
